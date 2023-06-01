@@ -53,7 +53,7 @@ while True:
         if flag_0==True:
             mostrar_altura_mas_alta(lista_personajes)
         else:
-            print("Primero normaliza datos (opcion 0)")
+            print("Primero normaliza datos (opcion 0).")
     elif opcion == 4:
         if flag_0==True:
             mostrar_altura_mas_baja(lista_personajes)
