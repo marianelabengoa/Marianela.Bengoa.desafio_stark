@@ -219,12 +219,12 @@ def mostrar_mas_alto_M(lista: list, primera_key: str, valor: str, segunda_key: s
     return personaje_mas_alto_M
 
 
-def set_colores(lista: list, valor):
-    colores = set()
+def set_por_valor(lista: list, valor):
+    valores = set()
     for elemento in lista:
-        colores.add(elemento[valor])
+        valores.add(elemento[valor])
 
-    return colores
+    return valores
 
 
 def cantidad_personajes(lista, set, valor):
@@ -345,17 +345,6 @@ def mostrar_femenino_mas_bajo(lista):
     mostrar_heroe(altura_mayor, "ALTURA DEL FEMENINO MAS BAJO")
 
 
-# def mostrar_promedio_altura_masculino(lista):
-#     l = filtrar_heroes(lista, "genero", "F")
-#     promedio = calcular_promedio(l, "altura")
-#     mostrar_heroe(promedio, "PROMEDIO ALTURAS")
-
-
-# def mostrar_promedio_altura_femenino(lista):
-#     l = filtrar_heroes(lista, "genero", "F")
-#     altura_mayor = calcular_menor(l, "altura", "nombre")
-#     mostrar_heroe(altura_mayor, "ALTURA DEL FEMENINO MAS BAJO")
-
 #              opcion 14                 #
 def promedio_alturas_masc(lista):
     l = filtrar_heroes(lista, "genero", "M")
@@ -369,11 +358,6 @@ def promedio_alturas_fem(lista):
     promedio = calcular_promedio(l, "altura")
     mostrar_heroe(promedio, "PROMEDIO ALTURAS FEMENINOS")
 
-
-# def mostrar_masculinos(lista):
-#     l = filtrar_heroes(lista, "genero", "M")
-#     nombres_masc = proyectar_heroe(l, "nombre")
-#     mostrar_lista(nombres_masc, "PERSONAJES MASCULINOS")
 
 #              opcion 16                 #
 def nombres_masculino_mas_alto_y_bajo(lista):
@@ -389,19 +373,18 @@ def nombres_femenino_mas_alto_y_bajo(lista):
 
 #              opcion 17/18                 #
 def cantidad_por_valor(lista, valor):
-    sets = set_colores(lista, valor)
+    sets = set_por_valor(lista, valor)
     cantidad_personajes(lista, sets, valor)
 
 
 #              opcion 20/21/22                 #
 def mostrar_nombre_valor(lista: list, valor: str, titulo: str):
-    sets = set_colores(lista, valor)
+    sets = set_por_valor(lista, valor)
     nombre_por_color(lista, sets, valor, titulo)
 
 
 #              opcion 19                 #
 def inteligencia(lista, valor):
-    sets = set_colores(lista, valor)
+    sets = set_por_valor(lista, valor)
     superheroes_inteligencia(lista, sets)
 
-#######
