@@ -404,3 +404,4 @@ def inteligencia(lista, valor):
     sets = set_colores(lista, valor)
     superheroes_inteligencia(lista, sets)
 
+#######
