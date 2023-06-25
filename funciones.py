@@ -1,10 +1,6 @@
 # <<<<<<< HEAD
 from data_stark import *
 
-# 12/6 PRESENCIAL PROGRAMACION
-# 146 PRESENCIAL LABORATORIO
-# 16/6 PRESENCIAL SPD
-
 
 def mostrar_heroe_fila(heroe: dict) -> None:
     print(f"nombre: {heroe['nombre']:10s}  id: {heroe['identidad']:10}  empresa: {heroe['empresa']:8} altura: {heroe['altura']} peso: {heroe['peso']} genero: {heroe['genero']} color de ojos: {heroe['color_ojos']:10}  color de pelo: {heroe['color_pelo']:10} fuerza: {heroe['fuerza']:10} inteligencia:  {heroe['inteligencia']:10}")
@@ -49,6 +45,12 @@ def mostrar_lista(lista: list, title: str) -> None:
 def mostrar_heroe(nombre: str, title: str) -> None:
     print(f"{title}")
     print(nombre)
+
+
+def nueva_lista(lista1: list, lista2: list) -> list:
+    for elemento in lista1:
+        lista2.append(elemento)
+    return lista2
 
 
 def stark_normalizar_datos(lista: list, primera_key: str, funcion: str) -> None:
@@ -260,6 +262,8 @@ def superheroes_inteligencia(lista, set):
     print(inteligencia)
 
 #              opcion 1                 #
+
+
 def mostrar_nombres(lista):
     nombres = proyectar_heroe(lista, "nombre")
     mostrar_lista(nombres, "nombres")
@@ -296,6 +300,8 @@ def mostrar_nombre_del_mayor_y_menor(lista):
     mostrar_heroe(nombres_max_min, "PERSONAJE MAYOR, PERSONAJE MENOR")
 
 #              opcion 7                 #
+
+
 def mostrar_mas_pesado_y_liviano(lista):
     mas_pesado = calcular_mayor_y_su_nombre(lista, "peso", "nombre")
     mas_liviano = calcular_menor_y_su_nombre(lista, "peso", "nombre")
@@ -365,6 +371,7 @@ def nombres_masculino_mas_alto_y_bajo(lista):
     altura_mayor = buscar_nombre_mas_alto_y_bajo(l, "altura", "nombre")
     mostrar_heroe(altura_mayor, "MASCULINO MAS ALTO / MASCULINO MAS BAJO")
 
+
 def nombres_femenino_mas_alto_y_bajo(lista):
     l = filtrar_heroes(lista, "genero", "F")
     altura_mayor = buscar_nombre_mas_alto_y_bajo(l, "altura", "nombre")
@@ -387,4 +394,3 @@ def mostrar_nombre_valor(lista: list, valor: str, titulo: str):
 def inteligencia(lista, valor):
     sets = set_por_valor(lista, valor)
     superheroes_inteligencia(lista, sets)
-
